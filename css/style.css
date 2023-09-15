@@ -113,3 +113,59 @@ body {
 .button.small {
     font-size: 14px;
 }
+
+/* header */
+
+.page-header {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 16px 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    line-height: 40px;
+}
+
+.menu-list {
+    display: none;
+
+}
+
+.menu-link {
+    display: inline-block;
+    line-height: 40px;
+}
+
+.hamburger-menu {
+    line-height: 40px;
+    font-size: 24px;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {
+
+    /* HEADER */
+
+    .menu-list {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+}
