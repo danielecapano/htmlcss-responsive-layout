@@ -39,7 +39,7 @@ a {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
 /* LAYOUT */
@@ -100,12 +100,12 @@ body {
 /* COMPONENT CLASS */
 
 .button {
+    font-size: 18px;
     text-align: center;
     display: inline-block;
     line-height: 40px;
     padding: 0 48px;
     border-radius: 900px;
-    font-weight: 600;
     background-color: var(--purple);
     color: var(--white);
     letter-spacing: 3px;
@@ -120,6 +120,7 @@ body {
 }
 
 .button.blue {
+    font-weight: 700;
     background-color: var(--blue);
     line-height: 48px;
     margin-top: 40px;
@@ -156,6 +157,7 @@ body {
 }
 
 .menu-link {
+    font-size: 18px;
     display: inline-block;
     line-height: 40px;
 }
@@ -190,7 +192,7 @@ section.hero {
 }
 
 .card-title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 800;
     color: var(--blue);
     margin-bottom: 32px;
@@ -198,8 +200,8 @@ section.hero {
 
 .card-text {
     line-height: 1.9;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+
 }
 
 .button.blue i {
@@ -223,6 +225,83 @@ section.hero {
 .col-inside figure img {
     max-width: 80%;
 }
+
+/* SECTION PLANNING */
+
+.planning {
+    padding: 60px 20px;
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.planning-image {
+    justify-content: center;
+    margin-bottom: 85px;
+}
+
+.planning-image img,
+.planning-card-image img {
+    margin: 0 auto;
+}
+
+.planning-title {
+    font-weight: 800;
+    font-size: 34px;
+    margin-bottom: 50px;
+}
+
+.planning-text {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.planning-card {
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 50px;
+    padding: 30px 25px;
+}
+
+.planning-card-image {
+
+    margin-bottom: 25px;
+}
+
+.planning-card-title {
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: var(--black)
+}
+
+.planning-card-text {
+    font-style: italic;
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 30px;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    aspect-ratio: 1;
+    background-color: var(--purple);
+    color: var(--black);
+    border-radius: 50%;
+    margin: 0 auto;
+
+
+}
+
+
+
+
+
+
+
+
 
 /* MEDIA QUERY */
 
@@ -264,7 +343,7 @@ section.hero {
     }
 
     .card-text {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .hero .col-inside.left {
@@ -275,6 +354,19 @@ section.hero {
         flex-basis: 60%;
     }
 
+    /* SECTION PLANNING */
+
+    .planning {
+        padding-top: 125px;
+    }
+
+    .planning-image {
+        margin-bottom: 130px;
+    }
+
+    .planning-title {
+        font-size: 72px;
+    }
 
 }
 
@@ -306,6 +398,28 @@ section.hero {
         max-width: 85%;
 
     }
+
+    /* SECTION PLANNING */
+
+    .planning .row {
+        align-items: flex-end;
+        column-gap: 50px;
+        flex-wrap: nowrap;
+    }
+
+    .planning .col {
+        flex-basis: 50%;
+    }
+
+    .planning-card-image img {
+        max-width: 70%;
+    }
+
+    .planning-title {
+        font-size: 34px;
+    }
+
+
 
 
 
