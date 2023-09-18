@@ -44,6 +44,10 @@ body {
     font-family: 'PT Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* LAYOUT */
 
 .container {
@@ -536,6 +540,27 @@ section.hero {
 
 .link {
     text-decoration: underline;
+}
+
+.page-footer {
+    padding: 75px 20px;
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+.footer-content {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content p+p {
+    margin-top: 60px;
+}
+
+.footer-link {
+    text-decoration: underline;
+    color: var(--purple);
 }
 
 
