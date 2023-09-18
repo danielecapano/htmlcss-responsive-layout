@@ -130,7 +130,14 @@ body {
 }
 
 .button.small {
-    font-size: 14px;
+    line-height: 35px;
+    padding: 0 16px;
+    letter-spacing: 0;
+}
+
+.button.small i,
+.button.blue i {
+    padding: 0 8px 0 0;
 }
 
 /* HEADER */
@@ -210,23 +217,19 @@ section.hero {
 .button.blue i {
     color: var(--white);
     font-size: 16px;
-    padding: 0 8px 0 0;
 }
 
 .hero-card .row.no-gap {
     height: 100%;
 }
 
-.col-inside figure {
-    display: flex;
-    justify-content: center;
+.hero .col-inside.right {
     align-items: flex-end;
-    height: 100%;
-
 }
 
 .col-inside figure img {
-    max-width: 80%;
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 /* SECTION PLANNING */
@@ -415,11 +418,83 @@ section.hero {
     line-height: 1.7;
 }
 
+/* SECTION ABOUT */
+
+.about {
+    padding: 80px 20px;
+}
+
+.about .row {
+    gap: 60px;
+}
+
+.about-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.about-description-title {
+    font-size: 48px;
+    color: var(--purple);
+}
+
+.about-description-text {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.about-quote {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.about-quote-image {
+    flex-shrink: 0;
+    position: relative;
+    width: 180px;
+    aspect-ratio: 1;
+}
+
+.about-quote-image figure {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.about-quote-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-quote-image i {
+    position: absolute;
+    display: block;
+    top: -10px;
+    right: -5px;
+    color: var(--purple);
+    font-size: 70px;
+}
+
+.about-quote-text {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--purple);
+}
+
+
+
 /* MEDIA QUERY */
 
 @media screen and (min-width: 576px) {
 
     /* SECTION HERO */
+
+    .hero .row.no-gap {
+        flex-wrap: nowrap;
+    }
 
     .hero .col {
         flex-basis: 50%;
@@ -430,21 +505,24 @@ section.hero {
     }
 
     .hero .col-inside.left {
-        flex-basis: 60%;
+        flex-basis: 50%;
     }
 
     .hero .col-inside.right {
-        flex-basis: 40%;
+        flex-basis: 50%;
+        align-self: flex-end;
     }
 
-    .col-inside figure img {
-        max-width: 100%;
-    }
+
 }
 
 @media screen and (min-width: 768px) {
 
     /* SECTION HERO */
+
+    .hero .row.no-gap {
+        flex-wrap: wrap;
+    }
 
     .hero .col {
         flex-basis: calc(100% * 4 / 12);
@@ -462,9 +540,7 @@ section.hero {
         flex-basis: 100%;
     }
 
-    .hero .col-inside.right {
-        flex-basis: 60%;
-    }
+
 
     /* SECTION PLANNING */
 
@@ -513,6 +589,30 @@ section.hero {
         font-size: 72px;
     }
 
+    /* SECTION ABOUT */
+
+    .about {
+        padding-bottom: 140px;
+    }
+
+    .about .row {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+    }
+
+    .col-right {
+        flex-basis: 230px;
+    }
+
+    .about-quote-image {
+        width: 230px;
+    }
+
+    .about-description-title {
+        font-size: 72px;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -539,10 +639,7 @@ section.hero {
         flex-basis: 50%;
     }
 
-    .col-inside figure img {
-        max-width: 85%;
 
-    }
 
     /* SECTION PLANNING */
 
@@ -577,17 +674,6 @@ section.hero {
 }
 
 @media screen and (min-width: 1200px) {
-
-    /* SECTION HERO */
-
-    .col-inside figure {
-        justify-content: flex-start;
-    }
-
-    .col-inside figure img {
-        max-width: 85%;
-        padding-left: 50px;
-    }
 
     /* SECTION TESTIMONIALS */
 
