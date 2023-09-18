@@ -110,35 +110,76 @@ html {
     font-weight: 700;
     text-align: center;
     display: inline-block;
-    line-height: 40px;
+    line-height: 38px;
     padding: 0 48px;
     border-radius: 900px;
-    background-color: var(--purple);
-    color: var(--white);
     letter-spacing: 3px;
     white-space: nowrap;
+    transition: 0.2s ease-in-out;
+}
+
+
+
+/* .button:hover {
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.30);
+} */
+
+.button.purple {
+    border: 1px solid var(--purple);
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.button.purple:hover {
+    color: var(--purple);
+    border-color: currentColor;
 }
 
 .button.white {
     font-size: 18px;
     font-weight: 400;
     padding: 0 16px;
+    border: 1px solid var(--white);
     background-color: var(--white);
     color: var(--black);
     letter-spacing: 0;
 }
 
+.button.white:hover {
+    color: var(--white);
+    border-color: currentColor;
+}
+
 .button.blue {
     font-size: 18px;
+    border: 1px solid var(--blue);
     background-color: var(--blue);
-    line-height: 48px;
+    color: var(--white);
+    line-height: 46px;
     margin-top: 40px;
 }
 
+.button.blue:hover {
+    color: var(--blue);
+    border-color: currentColor;
+}
+
+/* .button.blue:hover i {
+    color: var(--blue);
+} */
+
 .button.small {
-    line-height: 35px;
+    border: 1px solid var(--purple);
+    background-color: var(--purple);
+    color: var(--white);
+    line-height: 33px;
     padding: 0 16px;
     letter-spacing: 0;
+}
+
+.button.small:hover {
+    color: var(--purple);
+    border-color: currentColor;
 }
 
 .button.small i,
@@ -147,13 +188,25 @@ html {
 }
 
 .button.big {
-    line-height: 64px;
+    line-height: 62px;
     font-size: 18px;
+    border: 1px solid var(--white);
     background-color: var(--white);
     color: var(--purple);
     padding: 0 72px;
     margin: 32px 0;
 }
+
+.button.big:hover {
+    color: var(--white);
+    border-color: currentColor;
+}
+
+.button:hover {
+    background-color: transparent;
+}
+
+
 
 /* HEADER */
 
@@ -205,7 +258,7 @@ section.hero {
     height: 100%;
 }
 
-.hero-card i {
+.hero-card>i {
     display: inline-block;
     font-size: 80px;
     color: var(--blue);
@@ -230,7 +283,6 @@ section.hero {
 }
 
 .button.blue i {
-    color: var(--white);
     font-size: 16px;
 }
 
@@ -308,10 +360,18 @@ section.hero {
     justify-content: center;
     width: 50px;
     aspect-ratio: 1;
+    border: 1px solid var(--purple);
     background-color: var(--purple);
     color: var(--black);
     border-radius: 50%;
     margin: 0 auto;
+    transition: 0.2s ease-in-out;
+}
+
+.arrow:hover {
+    background-color: transparent;
+    color: var(--purple);
+    border-color: currentColor;
 }
 
 /* SECTION TESTIMONIALS */
